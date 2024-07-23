@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Nowadays, more and more games are introducing a pity system in their gacha systems. We wonder what is the expectation of the number of pulls to get the grand prize.
+Nowadays, more and more games are introducing a pity system in their gacha systems. We want to derive the expectation of the number of pulls to get the grand prize.
 
 ## Assumption
 
