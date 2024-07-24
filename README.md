@@ -37,7 +37,7 @@ Take $p=0.006$,  $N = 90$ and plot the graph of the cummulative distribution fun
 
 ![Cummulative Distribution Function](/GRAPH/CDF.png)
 
-We can see that there is a huge gap between $F_T(89)$ and $F_T(90)$. By the definition of $F_{T}(x) = \mathbb{P}\circ T^{-1}\left((-\infty, x]\right)$, we can conclude that there is only about a $0.4$ chance of obtaining a grand prize in the first $89$ pulls.
+We can see that there is a huge gap between $F_T(89)$ and $F_T(90)$. By the definition of $F_{T}(x) = \mathbb{P}\circ T^{-1}\left((-\infty, x]\right)$ and the fact that $F_T(89)$ is about $0.4$, we can conclude that there is about $0.6$ chance of not pulling out any grand prize until the guaranteed pull, i.e. the $90$-th pull.
 
 ## Expectation
 
