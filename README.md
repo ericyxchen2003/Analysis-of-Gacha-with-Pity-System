@@ -6,7 +6,7 @@
 
 Nowadays, more and more games are introducing a pity system in their gacha systems. A pity system guarantees that if a player does not obtain a certain prize after a certain number of pulls, the next pull is guaranteed to be the prize. We want to look into the behaviour  of such system.
 
-For example, in the game Genshin Impact, the chance of pulling out a 5-star character is $0.6$% for each wish but the player is guaranteed to win a 5-star character in the $90$-th wish if the player fails to obtain any 5-star character in the previous $89$ wishes.
+For example, in the game *Genshin Impact*, the chance of pulling out a 5-star character is $0.6$% for each wish but the player is guaranteed to win a 5-star character in the $90$-th wish if the player fails to obtain any 5-star character in the previous $89$ wishes.
 
 ## Assumption
 
