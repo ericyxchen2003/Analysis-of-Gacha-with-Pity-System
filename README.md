@@ -2,6 +2,8 @@
 
 ---
 
+Created by ericyxchen
+
 ## Introduction
 
 Nowadays, more and more games are introducing a pity system in their gacha systems. A pity system guarantees that if a player does not obtain a certain prize after a certain number of pulls, the next pull is guaranteed to be the prize. We want to look into the behaviour  of such system.
