@@ -14,67 +14,67 @@ Assume that for each pull, the probability of obtaining a grand prize is $p$. Th
 
 ## Definition
 
-Let $X$ be the random variable of the pulls to obtain a grand prize. Its probability mass function is given by
+Let $T$ be the random variable of the pulls to obtain a grand prize. Its probability mass function is given by
 ```math
-f_{X}(x)=\begin{cases}
+f_{T}(x)=\begin{cases}
 \left(1-p\right)^{x-1}p&x=1,2,\ldots,N-1,\\
 \left(1-p\right)^{x-1}&x=N.
 \end{cases}
 ```
-One can see that the distribution of $X$ is similar to a geometric distribution, but $f_X$ has a finite domain.
+One can see that the distribution of $T$ is similar to a geometric distribution, but $f_T$ has a finite domain.
 
 It follows that the cummulative distribution function is given by
 ```math
-F_{X}\left(x\right)=\begin{cases}
+F_{T}\left(x\right)=\begin{cases}
 1-\left(1-p\right)^x&x=1,2,\ldots,N-1,\\
 1&x=N.
 \end{cases}
 ```
 ## Cummulative Distribution Function
-Take $p=0.006$,  $N = 90$ and plot the graph of the cummulative distribution function $F_X$:
+Take $p=0.006$,  $N = 90$ and plot the graph of the cummulative distribution function $F_T$:
 
 ![Cummulative Distribution Function](/GRAPH/CDF.png)
 
-We can see that there is a huge gap between $F_X(89)$ and $F_X(90)$. By the definition of $F_{X}(x) = \mathbb{P}\circ X^{-1}\left((-\infty, x]\right)$, we can conclude that there is less than a $0.4$ chance of obtaining a grand prize in the first $89$ pulls.
+We can see that there is a huge gap between $F_T(89)$ and $F_T(90)$. By the definition of $F_{T}(x) = \mathbb{P}\circ T^{-1}\left((-\infty, x]\right)$, we can conclude that there is less than a $0.4$ chance of obtaining a grand prize in the first $89$ pulls.
 
 ## Expectation
 
 Consider the moment generating function:
 ```math
-M_X\left(t\right) = \mathbb{E}e^{tX}=\sum_{i=1}^{N-1}e^{ti}\left(1-p\right)^{i-1}p+e^{tN}\left(1-p\right)^{N-1}
+M_T\left(t\right) = \mathbb{E}e^{tT}=\sum_{i=1}^{N-1}e^{ti}\left(1-p\right)^{i-1}p+e^{tN}\left(1-p\right)^{N-1}
 ```
 Since
 ```math
-M_{X}\left(t\right)=\frac{p}{1-p}\sum_{i=1}^{N-1}\left(e^t\left(1-p\right)\right)^{i} + e^{tN}\left(1-p\right)^{N-1},
+M_{T}\left(t\right)=\frac{p}{1-p}\sum_{i=1}^{N-1}\left(e^t\left(1-p\right)\right)^{i} + e^{tN}\left(1-p\right)^{N-1},
 ```
 we have 
 ```math
-M_{X}\left(t\right)=\frac{p}{1-p}\cdot\frac{e^t\left(1-p\right)-\left(e^t\left(1-p\right)\right)^N}{1-e^t\left(1-p\right)}+e^{tN}\left(1-p\right)^{N-1}.
+M_{T}\left(t\right)=\frac{p}{1-p}\cdot\frac{e^t\left(1-p\right)-\left(e^t\left(1-p\right)\right)^N}{1-e^t\left(1-p\right)}+e^{tN}\left(1-p\right)^{N-1}.
 ```
  
 Next, compute the derivatives:
 ```math
-\frac{\mathrm{d}}{\mathrm{d}t}M_{X}\left(t\right) =pe^t\cdot\frac{1-N\alpha^{N-1}+\left(N-1\right)\alpha^N}{\left(1-\alpha\right)^2}+N\left(1-p\right)^{N-1}e^{tN},
+\frac{\mathrm{d}}{\mathrm{d}t}M_{T}\left(t\right) =pe^t\cdot\frac{1-N\alpha^{N-1}+\left(N-1\right)\alpha^N}{\left(1-\alpha\right)^2}+N\left(1-p\right)^{N-1}e^{tN},
 ```
 where
 ```math
 \alpha = e^t\left(1-p\right).
 ```
-Therefore, the expectation of $X$ is given by:
+Therefore, the expectation of $T$ is given by:
 ```math
-\left.\frac{\mathrm{d}}{\mathrm{d}t}M_{X}\left(t\right)\right|_{t=0} = \mathbb{E}X = \frac{1-\left(1-p\right)^N}{p}.
+\left.\frac{\mathrm{d}}{\mathrm{d}t}M_{T}\left(t\right)\right|_{t=0} = \mathbb{E}T = \frac{1-\left(1-p\right)^N}{p}.
 ```
-It is easy to see that $\mathbb{E}X$ is similar to but slightly less than $\mathbb{E}X'=\frac{1}{p}$, where $X'\sim \mathrm{Geom}\left(p\right)$.
+It is easy to see that $\mathbb{E}T$ is similar to but slightly less than $\mathbb{E}T'=\frac{1}{p}$, where $T'\sim \mathrm{Geom}\left(p\right)$.
 
 It is also not suprising to see that
 ```math
-\lim_{N\rightarrow\infty}\mathbb{E}X=\frac{1}{p},\quad\lim_{p\uparrow 1}\mathbb{E}X = 1\quad\text{and}\quad\lim_{p\downarrow 0}\mathbb{E}X=N.
+\lim_{N\rightarrow\infty}\mathbb{E}T=\frac{1}{p},\quad\lim_{p\uparrow 1}\mathbb{E}T = 1\quad\text{and}\quad\lim_{p\downarrow 0}\mathbb{E}T=N.
 ```
 
 ## Variance
 Compute the second order derivative of the moment generating function:
 ```math
-\frac{\mathrm{d}^2}{\mathrm{d}t^2}M_X\left(t\right) = p e^t\frac{\beta}{\left(1-\alpha\right)^2} + p(1-p)e^{2t}\frac{N\left(N-1\right)\left(\alpha^{N-1}-\alpha^{N-2}\right)}{\left(1-\alpha\right)^2} + 2p(1-p)e^{2t}\frac{\beta}{\left(1-\alpha\right)^3}+N^2\left(1-p\right)^{N-1}e^{tN},
+\frac{\mathrm{d}^2}{\mathrm{d}t^2}M_T\left(t\right) = p e^t\frac{\beta}{\left(1-\alpha\right)^2} + p(1-p)e^{2t}\frac{N\left(N-1\right)\left(\alpha^{N-1}-\alpha^{N-2}\right)}{\left(1-\alpha\right)^2} + 2p(1-p)e^{2t}\frac{\beta}{\left(1-\alpha\right)^3}+N^2\left(1-p\right)^{N-1}e^{tN},
 ```
 where
 ```math
@@ -82,14 +82,14 @@ where
 ```
 Therefore, the second order moment is given by
 ```math
-\left.\frac{\mathrm{d}^2}{\mathrm{d}t^2}M_X\left(t\right)\right|_{t=1}=\mathbb{E}X^2 =\frac{-\left(\left(2N-1\right)p+2\right)\left(1-p\right)^N-p+2}{p^2} .
+\left.\frac{\mathrm{d}^2}{\mathrm{d}t^2}M_T\left(t\right)\right|_{t=1}=\mathbb{E}T^2 =\frac{-\left(\left(2N-1\right)p+2\right)\left(1-p\right)^N-p+2}{p^2} .
 ```
-By $\mathrm{Var} X=\mathbb{E}X^2-\left(\mathbb{E}X\right)^2$, 
+By $\mathrm{Var} T=\mathbb{E}T^2-\left(\mathbb{E}T\right)^2$, 
 ```math
-\mathrm{Var}X = \frac{1-p - \left(2N-1\right)p\left(1-p\right)^N-\left(1-p\right)^{2N}}{p^2}.
+\mathrm{Var}T = \frac{1-p - \left(2N-1\right)p\left(1-p\right)^N-\left(1-p\right)^{2N}}{p^2}.
 ```
-For $X'\sim \mathrm{Geom}\left(p\right)$, the variance is given by $\mathrm{Var}X'=\frac{1-p}{p^2}$.
+For $T'\sim \mathrm{Geom}\left(p\right)$, the variance is given by $\mathrm{Var}T'=\frac{1-p}{p^2}$.
 Hence, it is not difficult to see that
 ```math
-\mathrm{Var}X < \mathrm{Var}X',\quad\lim_{N\uparrow\infty}\mathbb{E}X=\mathbb{E}X'\quad\text{and}\quad\lim_{p\uparrow1}\mathbb{E}X=0.
+\mathrm{Var}T < \mathrm{Var}T',\quad\lim_{N\uparrow\infty}\mathbb{E}T=\mathbb{E}T'\quad\text{and}\quad\lim_{p\uparrow1}\mathbb{E}T=0.
 ```
