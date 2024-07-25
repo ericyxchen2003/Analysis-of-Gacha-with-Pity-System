@@ -101,6 +101,7 @@ With $q\approx 0.0144$ and the cummulative distribution function
 F_{\hat{T}}\left(x\right) = 1-\left(1-q\right)^x,\quad x=1,2,\ldots,
 ```
 we can plot the graph of the function:
+
 ![Cummulative Distribution Function](/GRAPH/CDF-T-hat.png)
 
 Although the function curve of $F_{\hat{T}}$ is smoother, it can be seen that there is still about a $0.2$ probability of not winning any  grand prize after $90$ pulls. Despite the fact that the two expectations are equal, the cummulative distribution function of the geometrically distributed random variable $\hat{T}$ implies that from the game publisher's point of view, about $20$ percent of players fail to win any grand prizes after $90$ pulls, which can cause players to give up playing the game.
