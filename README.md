@@ -178,7 +178,7 @@ Given that the first grand prize the player wins is the featured prize, $T^*$ ca
 ```math
 \mathbb{E}\left(T^*\mid Y=1\right) = \frac{1-\left(1-p\right)^N}{p}.
 ```
-On the other hand, under the condition $Y=2$, the first grand prize the player wins is not the featured one and the second grand prize is guaranteed to be the featured one. Let $T^*_1, T^*_2$ be the random variable of the waiting time to obtain the first grand prize and the waiting time to obtain the second grand prize after winning the first prize. By our definition, it follows that $T^* = T^*_1 + T^*_2$. Similar to the previous argument, we shall notice that
+On the other hand, under the condition $Y=2$, the first grand prize the player wins is not the featured one and the second grand prize is guaranteed to be the featured one. Let $T^*_1, T^*_2$ be the random variable of the waiting time to obtain the first grand prize and the waiting time to obtain the second grand prize after winning the first prize. By our definition, it follows that $T^* = T^* _1 + T^* _2$. Similar to the previous argument, we shall notice that
 ```math
 T^*_{1}, T^*_{2}\sim\mathrm{P-Geom}\left(p, N\right).
 ```
